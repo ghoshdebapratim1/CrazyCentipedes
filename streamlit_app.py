@@ -118,7 +118,7 @@ df['Combo1'] = df['Music effects']+'-'+df['Anxiety'].apply(str)
 revised = pd.crosstab(df['Fav genre'], df['Combo1'])
 music_anxiety = px.imshow(revised, height = 800, width = 1000, title = 'Music and Anxiety')
 st.plotly_chart(music_anxiety)
-st.write('Next, we explored the correlations between music and levels of anxiety in the form of a heatmap. The X-axis (the horizontal axis) has combinations of both the music effects and levels of anxiety, while the Y-axis (the vertical axis), has the different favorite genres of music. The intensity of colors on the map represents the amount of people that have submitted any given response. The darker the color, the higher the count of people that submitted those answers. The graph shows that rock music best improves people's anxiety, despite them having high levels of it, as shown by the darkest colors around that area.') 
+st.write('Next, we explored the correlations between music and levels of anxiety in the form of a heatmap. The X-axis (the horizontal axis) has combinations of both the music effects and levels of anxiety, while the Y-axis (the vertical axis), has the different favorite genres of music. The intensity of colors on the map represents the amount of people that have submitted any given response. The darker the color, the higher the count of people that submitted those answers. The graph shows that rock music best improves people\'s anxiety, despite them having high levels of it, as shown by the darkest colors around that area.') 
 
 #Music and Insomnia - Bar graph - 7th Chart
 st.subheader('Question 6 : Which Music Genre Best Helps With Insomnia?')
