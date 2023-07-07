@@ -29,7 +29,7 @@ st.markdown("- Yeojoon Hur ")
 
 
 st.header('Data Description ')
-st.write('We got our data from the "Music and Mental Health Survey" done by Cathering Rasgaitis on Kaggle. This dataset consists of 736 rows and 33 columns.')
+st.write('We got our data from the "Music and Mental Health Survey" done by Catherine Rasgaitis on Kaggle. This dataset consists of 736 rows and 33 columns.')
 
 st.write(df.head())
 # st.subheader('Data Science Workflow')
