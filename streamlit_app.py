@@ -43,7 +43,7 @@ st.write(df.head())
 #Section 1 - Data Inspection and Cleaning
 st.header('Section 1 - Data Pre Processing ')
 
-st.write("Before the visualization of our data, we first removed columns that were irrelevant to our hypothesis through the utilization of the drop() function. We then checked if there were other null (non-present) values in the data by using the Isnull().sum() function, which enabled easy identification of columns with corresponding missing values. The implementation of the mode and mean functions allowed for quick replacement of the missing values per column.")
+st.write("Before the visualization of our data, we removed columns that were irrelevant to our hypothesis by utilizing the drop() function. We then checked if there were other null values present in the data using the Isnull ().sum() function, which enabled easy identification of columns with corresponding missing values. Implementing the mode and mean functions allowed for quick replacement of the missing values per column. However, unlike the other columns that were of the data type: object,  the ‘BPM’ column was the only column with the data type: float. Thus, we used the isnull() function to create another data frame with the missing values of the ‘BPM’ column. After that, we created a list of genres with the missing values, and filled the missing values of each genre by looping through the list and filling it with a mean value of each genre.")
 # Yeojoon talk about removing irrelevant and how you replaced  missing values 
 ## Dropping unnecessary columns
 df = df.drop(["Timestamp","Permissions"], axis=1)
