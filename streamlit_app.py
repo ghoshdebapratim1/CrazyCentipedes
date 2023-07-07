@@ -110,7 +110,7 @@ fig = px.sunburst(df,
                   height = 1000,
                   width = 1000)
 st.plotly_chart(fig)
-st.write('')
+st.write('Now we start comparing the effects of music and mental health. We wanted to explore which music genre, if any, best helped to alleviate depression. This graph is read from the inside to the outside. The innermost circle contains the level of depression that the respondents self-reported. From any given section of the innermost circle, if you move directly outwards to the next section, you will see the respondent\'s self-reported effects of the music on their mental health. Moving outwards from there, you see which genre of music the majority of people in those categories prefer listening to, indicating that that genre is responsible for those effects on their mental health. For example, this graph shows us that, generally, rock, pop, and metal worked best to improve people\'s mental health.')
 
 #Music and Anxiety - Heatmap - 6th Chart
 st.subheader('Question 5 : Which Music Genre Best Helps With Anxiety? ')
@@ -118,6 +118,7 @@ df['Combo1'] = df['Music effects']+'-'+df['Anxiety'].apply(str)
 revised = pd.crosstab(df['Fav genre'], df['Combo1'])
 music_anxiety = px.imshow(revised, height = 800, width = 1000, title = 'Music and Anxiety')
 st.plotly_chart(music_anxiety)
+st.write('Next, we explored the correlations between music and levels of anxiety in the form of a heatmap. The X-axis (the horizontal axis) has combinations of both the music effects and levels of anxiety, while the Y-axis (the vertical axis), has the different favorite genres of music. The intensity of colors on the map represents the amount of people that have submitted any given response. The darker the color, the higher the count of people that submitted those answers. The graph shows that rock music best improves people's anxiety, despite them having high levels of it, as shown by the darkest colors around that area.') 
 
 #Music and Insomnia - Bar graph - 7th Chart
 st.subheader('Question 6 : Which Music Genre Best Helps With Insomnia?')
