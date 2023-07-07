@@ -134,6 +134,7 @@ st.write('The chart above explores the relationship between types of music and s
 st.subheader('Question 7 : Which Music Genre Best Helps With OCD?')
 music_OCD = px.box(df, x = 'Fav genre', y = 'OCD', title = 'Music and OCD')
 st.plotly_chart(music_OCD)
+st.write('The last relationship we explored was the relationship between music and levels of OCD. The blue bar inside the boxes represent the median levels of OCD for any given music genre. The bottom line of the box represents the 25th percentile, while the top line represents the 75th percentile. The bigger the box, the higher the amount of variance between all the individuals that prefer that type of music. People that listen to folk and latin music generally have lower amounts of OCD, as they have low medians and lower variances (as shown by the more compact boxes).
 
 st.header("Conclusion")
 
